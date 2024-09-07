@@ -95,6 +95,13 @@ namespace RogueElements
         public bool GetFulfillableBorder(Dir4 dir, int index) => this.FulfillableBorder[dir][index];
 
         /// <summary>
+        /// Returns if the loc corresponds to an open tile in the room
+        /// </summary>
+        /// <param name="loc"></param>
+        /// <returns></returns>
+        public virtual bool IsLocInsideOpenedRoom(Loc loc) => this.Draw.Contains(loc.X, loc.Y);
+
+        /// <summary>
         /// Gets rhe tiles that this room has opened, which can be used to inform other rooms where to connect.
         /// </summary>
         /// <param name="dir"></param>

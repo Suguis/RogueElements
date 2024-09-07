@@ -19,6 +19,8 @@ namespace RogueElements
 
         bool GetFulfillableBorder(Dir4 dir, int index);
 
+        bool IsLocInsideOpenedRoom(Loc loc);
+
         Loc ProposeSize(IRandom rand);
 
         void PrepareSize(IRandom rand, Loc size);
